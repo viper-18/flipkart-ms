@@ -27,5 +27,11 @@ pipeline {
         sh 'mvn clean package'
       }
     }
+
+    stage('Code Package') {
+          steps {
+            echo 'PIPELINE PROCESS COMPLETE !!'
+          }
+        }
   }
 }
