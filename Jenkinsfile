@@ -28,7 +28,7 @@ pipeline {
       }
     }
 
-    stage('Code Package') {
+    stage('finish') {
           steps {
             echo 'PIPELINE PROCESS COMPLETE !!'
           }
