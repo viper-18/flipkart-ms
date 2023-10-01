@@ -58,18 +58,7 @@ pipeline {
       }
     }
 
-    stage('Docker Image Push to Amazon ECR') {
-      steps {
-        script {
-          withDockerRegistry([credentialsId: 'ecr:ap-south-1:ecr-credentials', url: 'https://554138249436.dkr.ecr.ap-south-1.amazonaws.com']) {
-            sh """
-            docker tag flipkart-ms:dev-flipkart-v1.${BUILD_NUMBER} 554138249436.dkr.ecr.ap-south-1.amazonaws.com/flipkart-ms:${BUILD_NUMBER}
-            docker push 554138249436.dkr.ecr.ap-south-1.amazonaws.com/flipkart-ms:dev-flipkart-v1.${BUILD_NUMBER}
-            """
-          }
-        }
-      }
-    }
+
 
   }
 }
